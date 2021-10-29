@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imooc.mapper.UserMapper">
+     <select id="equlsName" resultType="string">
+         SELECT id
+         FROM  users
+         where username=#{name}
+     </select>
+    <insert id="insertUser" >
+         insert into users (id,
+                            username,
+                            password,
+                            nickname,
+                            face,
+                            sex,
+                            birthday,
+                            created_time,
+                            updated_time)values (#{id},
+                                                 #{username},
+                                                 #{password},
+                                                 #{nickname},
+                                                 #{face},
+                                                 #{sex},
+                                                 #{birthday},
+                                                 #{createdTime},
+                                                 #{updatedTime},
+                                                 )
+    </insert>
+    <select id="selectNameandPassword" resultType="com.imooc.pojo.UserDO">
+          Select *
+          FROM  users
+          where username=#{name} and password=#{password}
+    </select>
+    <update id="updateUserMsg" >
+          update users
+          set
+            username=#{username},
+            password=#{password},
+            nickname=#{nickname},
+            realname=#{realname},
+            mobile=#{mobile},
+            email=#{email},
+            sex=#{sex},
+            birthday=#{birthday}
+          where id=#{id}
+    </update>
+    <update id="updateUserFace">
+        update users
+        set
+            face=#{face},
+            updated_time=#{UpdatedTime}
+        where id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imooc.mapper.OrderItemsMapper">
+    <insert id="insetOrderitems" >
+      insert into order_items
+    ( id,
+    ,order_id
+    ,item_id
+    ,item_img
+    ,item_name
+    ,item_spec_id
+    ,item_spec_name
+    ,price
+    ,buy_counts )values (
+     ,#{id}
+     ,#{orderId}
+     ,#{itemId}
+     ,#{itemImg}
+     ,#{itemName}
+     ,#{itemSpecId}
+     ,#{itemSpecName}
+     ,#{price}
+     ,#{buyCounts} )
+    </insert>
+    <select id="queryByOrderId" resultType="com.imooc.pojo.OrderItemsDO">
+        select *
+        from order_items
+        where order_id=#{orderId}
+    </select>
+</mapper>

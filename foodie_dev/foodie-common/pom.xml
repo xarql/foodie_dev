@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>foodie_dev</artifactId>
+        <groupId>com.imooc</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+<!--1.聚合工程分为顶级工程与，子工程。这两者关系是父子继承关系，子工程在mavean中定义为module模块,
+     模块之间是平级，是可以相互依赖。
+    2.子模块可以使用顶级工程里所有资源，子模块之间如果使用资源必须构建依赖。
+    3.一个顶级模块是由多个子工程共同组合而成。
+-->
+    <artifactId>foodie-common</artifactId>
+<!--    子工程的默认打包方式-->
+<!--    <packaging>jar</packaging>-->
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>

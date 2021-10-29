@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imooc.mapper.OrderStatusMapper">
+    <insert id="insertOrderStatus" >
+    insert into order_status
+    (
+        order_id,
+        order_status,
+        created_time,
+        pay_time,
+        deliver_time,
+        success_time,
+        close_time,
+        comment_time,
+    )values (
+    #{orderId},
+    #{orderStatus},
+    #{createdTime},
+    #{payTime},
+    #{deliverTime},
+    #{successTime},
+    #{closeTime},
+    #{commentTime} )
+    </insert>
+    <update id="updateByPrimaryKeySelective">
+        update order_status
+        set  order_id=#{orderId},order_status=#{orderStatus},pay_time=#{payTime}
+    </update>
+    <select id="selectByOrderId" resultType="com.imooc.pojo.OrderStatusDO">
+        select *
+        from order_status
+        where order_id=#{orderId}
+    </select>
+    <select id="selectByStatus" resultType="com.imooc.pojo.OrderStatusDO">
+        select *
+        FROM order_status
+        where order_status=#{orderStatus}
+    </select>
+    <update id="updateByIdStatus">
+        update order_status
+        set order_id=#{orderId},
+            order_Status=#{orderStatus},
+            close_time=#{closeTime}
+    </update>
+    <update id="updateCommentTime">
+        update order_status
+        set comment_time=#{commentTime}
+        where order_id=#{orderId}
+    </update>
+</mapper>
