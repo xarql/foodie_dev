@@ -28,10 +28,15 @@ public class UserController {
     private UserService userService;
 
     @ApiOperation(value = "用户名是否存在",notes ="用户名是否存在1",httpMethod="GET")
-    @GetMapping("/usernameIsExist?username=")
-    public IMOOCJSONResult equlseUserName(@RequestParam(required =true,name = "name") @NotBlank String name){
-//     1.查找注册的用户名是否存在
-       boolean isExist=userService.queryUsernameIsExist(name);
+    @GetMapping("/usernameIsExist")
+    public IMOOCJSONResult equlseUserName(@RequestParam(required =true,name = "username") @NotBlank String username){
+//     1.判断用户名不能为空
+        if (username==null) {
+            return IMOOCJSONResult.errorMsg("用户名不能为空");
+        }
+
+//     2.查找注册的用户名是否存在
+       boolean isExist=userService.queryUsernameIsExist(username);
        if(isExist){
            return IMOOCJSONResult.ok();
        }
@@ -49,7 +54,9 @@ public class UserController {
         String password=userBO.getPassword();
         String confirmPwd=userBO.getConfirmPassword();
         //0.判断用户名和密码必须不为空
-
+        if (username==null || password==null|| confirmPwd==null) {
+            return IMOOCJSONResult.errorMsg("用户名或密码不能为空");
+        }
         //1.查询用户名是否存在
         boolean isExist=userService.queryUsernameIsExist(userBO.getUsername());
         if(isExist){
@@ -70,6 +77,8 @@ public class UserController {
         //设置cookie true->加密
         CookieUtils.setCookie(request,response,"user",
                 JsonUtils.objectToJson(userResult),true);
+        // TODO 生成用户token，存入redis会话
+        // TODO 同步购物车数据
         return IMOOCJSONResult.ok();
     }
      /**
@@ -86,8 +95,8 @@ public class UserController {
          if(userBO.getUsername()==null||userBO.getPassword()==null){
              return IMOOCJSONResult.errorMsg("用户名或密码不能为空");
          }
-         //4.实现注册
-         String id=MD5Utils.getMD5Str(password);
+         //1.实现注册 加密密码
+
          UserDO userResult=userService.queryUserForLogin(username, MD5Utils.getMD5Str(password));
          if(userResult==null){
              return IMOOCJSONResult.errorMsg("用户名或密码不正确");

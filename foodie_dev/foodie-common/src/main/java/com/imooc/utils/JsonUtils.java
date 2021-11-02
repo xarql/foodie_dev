@@ -13,7 +13,6 @@ import java.util.List;
  * @Description: json转换类
  * Copyright: Copyright (c)
  * Company: www.imooc.com
- * 
  * @author imooc
  */
 public class JsonUtils {
@@ -38,7 +37,6 @@ public class JsonUtils {
     
     /**
      * 将json结果集转化为对象
-     * 
      * @param jsonData json数据
      * @param beanType 对象中的object类型
      * @return
