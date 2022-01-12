@@ -35,7 +35,6 @@ public class CenterUserServiceImpl implements CenterUserService {
         updateUser.setId(userId);
         updateUser.setUpdatedTime(new Date());
         userMapper.updateUserMsg(updateUser);
-        System.out.println("运行了");
         return userMapper.selectById(userId);
     }
     @Transactional(propagation = Propagation.REQUIRED)

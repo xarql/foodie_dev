@@ -1,0 +1,11 @@
+spring:
+  datasource: #数据源的相关配置
+    url: jdbc:mysql://localhost:3306/foodie_dev?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    password: root
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+server:
+  port: 8088
+

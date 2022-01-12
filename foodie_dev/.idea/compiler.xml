@@ -10,8 +10,8 @@
         <module name="foodie-service" />
         <module name="foodie-pojo" />
         <module name="foodie-common" />
-        <module name="foodie-api" />
         <module name="foodie-mapper" />
+        <module name="web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +21,7 @@
       <module name="foodie-pojo" target="1.8" />
       <module name="foodie-service" target="1.8" />
       <module name="foodie_dev" target="1.8" />
+      <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -30,6 +31,8 @@
       <module name="foodie-mapper" options="-parameters" />
       <module name="foodie-pojo" options="-parameters" />
       <module name="foodie-service" options="-parameters" />
+      <module name="foodie_dev" options="-parameters" />
+      <module name="web" options="-parameters" />
     </option>
   </component>
 </project>

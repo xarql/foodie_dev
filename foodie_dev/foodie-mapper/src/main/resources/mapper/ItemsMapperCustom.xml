@@ -50,7 +50,8 @@
 
     <select id="searchItemsByThirdCat" resultType="com.imooc.pojo.vo.SearchItemsVO">
         SELECT
-        i.id as itemId,
+        i.id as itemId、】
+        a'w'h't',
         i.item_name as itemName,
         i.sell_counts as sellCounts,
         ii.url as imgUrl,

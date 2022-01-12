@@ -1,12 +1,11 @@
 package com.imooc.config;
 
-import com.mysql.cj.CoreSession;
+
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.filter.CorsFilter;
 
 /**
@@ -24,6 +23,8 @@ public class CorsConfig {
          //1.添加cors配置信息
         CorsConfiguration config=new CorsConfiguration();
         config.addAllowedOrigin("http://localhost:8080");
+        config.addAllowedOrigin("http://39.104.49.49:8080");
+        config.addAllowedOrigin("http://39.104.49.49");
         //设置是否发送cookie 信息
         config.setAllowCredentials(true);
         //设置允许请求的方式

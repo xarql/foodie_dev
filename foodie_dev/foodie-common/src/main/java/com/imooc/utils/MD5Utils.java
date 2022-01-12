@@ -2,7 +2,6 @@ package com.imooc.utils;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 
-import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
 /**

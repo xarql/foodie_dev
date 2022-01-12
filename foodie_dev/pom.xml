@@ -6,6 +6,9 @@
     <groupId>com.imooc</groupId>
     <artifactId>foodie_dev</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
+    <packaging>pom</packaging>
     <!--    子工程 模块-->
     <modules>
         <module>foodie-common</module>
@@ -24,7 +27,7 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <packaging>pom</packaging>
+
 
     <!--    引入依赖 parent-->
     <parent>
@@ -50,6 +53,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <!--打包war[2] 移除自带内置tomcat-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
         <!--springboot默认的是yml,引入这个依赖之后，我们可以解析其他的配置文件-->
         <dependency>
@@ -69,6 +79,13 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.3.0</version>
         </dependency>
+        <!--引入redis-->
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
         <!--导入lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -107,5 +124,19 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.12</version>
         </dependency>
+        <!--打包war[3] 添加依赖 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--防止项目中会引用到tomcat的相关包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+
     </dependencies>
 </project>

@@ -26,10 +26,10 @@ public class Swagger2 {
     public Docket createRestApi(){
         return new Docket(DocumentationType.SWAGGER_2)   //指定API类型为swagger2
           .apiInfo(apiInfo())                            //用于定义api文档汇总信息
-          .select().apis(RequestHandlerSelectors
-                        .basePackage("com.imooc.controller")) //指定controller 包
-                        .paths(PathSelectors.any())         //所有controller
-                        .build();
+          .select()
+          .apis(RequestHandlerSelectors.basePackage("com.imooc.controller")) //指定controller 包
+          .paths(PathSelectors.any())         //所有controller
+          .build();
     }
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()

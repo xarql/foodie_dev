@@ -27,10 +27,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="foodie-service" />
+    <orderEntry type="module" module-name="foodie_dev" />
+    <orderEntry type="module" module-name="foodie-api" />
+    <orderEntry type="module" module-name="foodie-common" />
     <orderEntry type="module" module-name="foodie-mapper" />
     <orderEntry type="module" module-name="foodie-pojo" />
-    <orderEntry type="module" module-name="foodie-common" />
+    <orderEntry type="module" module-name="foodie-service" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:2.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:2.1.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.1.5.RELEASE" level="project" />

@@ -38,7 +38,7 @@
         <result column="catImage" property="catImage"/>
         <result column="bgColor" property="bgColor"/>
         <collection property="simpleItemList" ofType="com.imooc.pojo.vo.SimpleItemVO">
-            <id column="itmeId" property="itmeId"/>
+            <id column="itemId" property="itemId"/>
             <result column="itemName" property="itemName"/>
             <result column="itemUrl" property="itemUrl"/>
         </collection>

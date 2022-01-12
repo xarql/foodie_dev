@@ -21,7 +21,7 @@ public class BaseController {
    String paymentUrl="http://payment.t.mukewang.com/doodie-payment/payment/createMerchantOrder";
 
    String x1="http://n6xvu3.natappfree.cc";
-   String x2="http://localhost8088";
+   String x2="http://39.103.45.45:8088/foodie-api";
    //微信支付成功->支付中心->天天吃货平台
    //                     ->回调通知的url
    String payReturnUrl=x2+"/order/notifyMerchantOrderPaid";

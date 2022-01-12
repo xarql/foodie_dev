@@ -1,4 +1,5 @@
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\OrderItemsDO.java
+D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\vo\OrderStatusCountsVO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\OrderStatusDO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\bo\AddressBO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\UserDO.java
@@ -8,6 +9,7 @@ D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\vo\OrderVO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\UserAddressDO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\bo\UserBO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\ItemsDO.java
+D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\vo\MyCommentVO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\CategoryDO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\vo\MyOrdersVO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\ItemsSpecDO.java
@@ -25,4 +27,5 @@ D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\bo\center\Center
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\vo\MySubOrderItemVO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\vo\SearchItemsVO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\ItemsImgDO.java
+D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\bo\center\OrderItemsCommentBO.java
 D:\shopping\foodie_dev\foodie-pojo\src\main\java\com\imooc\pojo\vo\NewItemsVO.java

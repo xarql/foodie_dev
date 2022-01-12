@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SimpleItemVO {
-    private String itmeId;
+    private String itemId;
     private String itemName;
     private String itemUrl;
 }

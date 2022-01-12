@@ -1,0 +1,6 @@
+spring:
+  datasource: # 数据源的相关配置
+    url: jdbc:mysql://localhost:3306/foodie_dev?characterEncoding=utf-8&serverTimezone=GMT%2B8
+    password: xarql0309
+server:
+  port: 8088

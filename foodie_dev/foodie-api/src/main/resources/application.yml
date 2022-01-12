@@ -11,7 +11,7 @@ server:
 #############################################################
 spring:
     profiles:
-     active : dev          #激活dev
+     active : dev        #激活dev
 
     datasource: # 数据源的相关配置
       type: com.zaxxer.hikari.HikariDataSource # 数据源类型：HikariCP

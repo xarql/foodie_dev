@@ -27,6 +27,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+     /**
+      * 判断该用户是否可注册
+      * @param username
+      * @return
+      */
     @ApiOperation(value = "用户名是否存在",notes ="用户名是否存在1",httpMethod="GET")
     @GetMapping("/usernameIsExist")
     public IMOOCJSONResult equlseUserName(@RequestParam(required =true,name = "username") @NotBlank String username){

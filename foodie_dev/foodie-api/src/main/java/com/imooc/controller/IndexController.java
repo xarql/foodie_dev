@@ -35,7 +35,6 @@ public class IndexController {
        List<CarouselDO> list=carouselService.querryAll(YesOrNo.YES.type);
        return IMOOCJSONResult.ok(list);
     }
-
     @ApiOperation(value="获取商品分类(一级分类)",notes="获取商品分类(一级分类)",httpMethod = "GET")
     @GetMapping("/cats")
     public IMOOCJSONResult cats() {
